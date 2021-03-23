@@ -283,6 +283,7 @@ class tpqoa(object):
                 self.ticks += 1
                 self.time = msg.time
                 self.on_success(msg.time,
+                                str(msg.instrument),
                                 float(msg.bids[0].dict()['price']),
                                 float(msg.asks[0].dict()['price']))
                 if stop is not None:
